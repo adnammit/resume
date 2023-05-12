@@ -1,0 +1,62 @@
+\documentclass[letterpaper,10pt]{article}
+\pagenumbering{gobble}
+\usepackage[margin=0.95in]{geometry}
+\usepackage{multicol}
+\setlength{\multicolsep}{6.0pt plus 2.0pt minus 1.5pt} % 50% of original values
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{pifont}
+\usepackage[misc,geometry]{ifsym}
+\usepackage{wasysym}
+\usepackage{hyperref}
+\usepackage{fontawesome}
+
+
+% look here for documentation on all the symbols: https://math.uoregon.edu/wp-content/uploads/2014/12/compsymb-1qyb3zd.pdf
+\setlist[itemize]{topsep=0pt,itemsep=0pt}
+\setlist[itemize,1]{label=\raisebox{-0.15em}{\FilledSmallTriangleRight}}
+\setlist[itemize,2]{label=\raisebox{0.05em}{\varhexstar}}
+\setlist[itemize,3]{label=\raisebox{-0.15em}{\SmallDiamondshape}}
+
+
+\newcommand{\comment}[1]{}
+\comment{
+now i can make multiline comments
+}
+
+\newcommand{\sectionHeader}[1]{
+\vspace{14pt}
+\LargeBold{#1}\\
+\indent\rule{16.3cm}{0.4pt}
+}
+
+\newcommand{\HugeBold}[1]{
+\textbf{\Huge #1}
+}
+
+\newcommand{\hugeBold}[1]{
+\textbf{\huge #1}
+}
+
+\newcommand{\LargeBold}[1]{
+\textbf{\Large #1}
+}
+
+\newcommand{\rightAlignBold}[1]{
+\vspace{14pt}
+\hspace{\stretch{1}}\textbf{\large#1}\hspace{\stretch{0}}\\
+}
+
+\begin{document}
+
+
+%====COVER LETTER====
+\input{cover-letter.tex}
+
+%====RESUME====
+\input{resume-body.tex}
+
+%====REFERENCES====
+% \input{references.tex}
+
+\end{document}
